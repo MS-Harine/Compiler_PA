@@ -3,7 +3,16 @@ import java.util.LinkedList;
 
 public class Tester {
 	public static void main(String[] args) {
-		String filename = "testcase_ok.txt";
+		testParser("testcase_ok.txt");
+	}
+	
+	public static void testParser(String filename) {
+		Parser parser = new Parser();
+		boolean result = parser.parse(filename);
+		System.out.println(result);
+	}
+	
+	public static void testScanner(String filename) {
 		Scanner scanner = new Scanner();
 		LinkedList<Token> list;
 		System.out.println("Test Scanner");

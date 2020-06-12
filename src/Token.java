@@ -222,6 +222,20 @@ public class Token {
 			
 			return result;
 		}
+		public boolean isUnaryOp() {
+			boolean result = false;
+			switch (identifier) {
+			case "++":
+			case "--":
+				result = true;
+				break;
+			default:
+				result = false;
+				break;
+			}
+			
+			return result;
+		}
 	}
 	public enum SymbolList implements TypePrintable {
 		L_PARENTHESIS("Left Parenthesis", "("),
